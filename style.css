@@ -248,8 +248,8 @@ header nav {
 
 .stats-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 15px;
     margin-top: 30px;
 }
 
@@ -266,8 +266,9 @@ header nav {
 }
 
 .stat-item p {
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     margin-bottom: 0;
+    white-space: nowrap;
 }
 
 /* Education & Internship Section */
@@ -392,6 +393,30 @@ header nav {
     font-size: 0.9rem;
     color: #ccc;
     line-height: 1.5;
+}
+
+.intern-img-container {
+    margin-top: 20px;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--glass-border);
+    transition: var(--transition-speed);
+}
+
+.intern-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.intern-img-container:hover {
+    border-color: var(--primary-color);
+    box-shadow: 0 5px 20px rgba(0, 123, 255, 0.2);
+}
+
+.intern-img-container:hover .intern-img {
+    transform: scale(1.05);
 }
 
 @media (max-width: 991px) {
@@ -868,6 +893,68 @@ footer {
 .hobby-card p {
     font-size: 0.9rem;
     color: var(--text-muted);
+}
+
+/* Activities Section Styles */
+.activities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 50px;
+}
+
+.activity-card {
+    background: var(--bg-card);
+    border: 1px solid var(--glass-border);
+    padding: 30px;
+    border-radius: 20px;
+    transition: var(--transition-speed);
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.activity-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--primary-color);
+    box-shadow: 0 10px 30px rgba(0, 123, 255, 0.15);
+}
+
+.activity-icon {
+    width: 50px;
+    height: 50px;
+    background: rgba(0, 123, 255, 0.1);
+    color: var(--primary-color);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    transition: var(--transition-speed);
+}
+
+.activity-card:hover .activity-icon {
+    background: var(--primary-color);
+    color: white;
+    transform: scale(1.1);
+}
+
+.activity-card h3 {
+    font-size: 1.3rem;
+    color: var(--text-primary);
+}
+
+.activity-card p {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    line-height: 1.4;
+}
+
+@media (max-width: 768px) {
+    .activities-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* Certificates Section Styles */
