@@ -28,6 +28,24 @@ body {
     line-height: 1.6;
     overflow-x: hidden;
     position: relative;
+    /* Animated Gradient Background */
+    background: linear-gradient(-45deg, #0b0c0e, #15171a, #00122e, #0b0c0e);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+#bg-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 0.4;
 }
 
 .container {
@@ -445,7 +463,8 @@ section::before {
 
 /* About Section Background */
 .about {
-    background: linear-gradient(to bottom, #0f1012, #15171a);
+    padding: 100px 0;
+    background: transparent;
 }
 
 .about::after {
@@ -461,13 +480,15 @@ section::before {
 
 /* Education Section Background */
 .experience {
-    background: #15171a;
+    padding: 100px 0;
+    background: transparent;
     border-top: 1px solid rgba(255, 255, 255, 0.03);
 }
 
 /* Skills Section Background */
 .skills {
-    background: linear-gradient(to bottom, #15171a, #0f1012);
+    padding: 100px 0;
+    background: transparent;
     position: relative;
 }
 
@@ -484,16 +505,8 @@ section::before {
 }
 
 /* Gallery and Hobbies sections use shared classes */
-#college-work {
-    background: #0f1012;
-}
-
-#certificates {
-    background: linear-gradient(to bottom, #0f1012, #15171a);
-}
-
-#hobbies {
-    background: #15171a;
+#college-work, #certificates, #hobbies {
+    background: transparent;
 }
 
 .container {
@@ -507,7 +520,7 @@ section::before {
 /* Skills Section */
 .skills {
     padding: 100px 0;
-    background: #0b0c0e;
+    background: transparent;
 }
 
 .section-title {

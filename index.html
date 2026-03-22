@@ -12,9 +12,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body class="dark-theme">
+    <canvas id="bg-canvas"></canvas>
     <header id="header">
         <nav class="container">
-            <div class="logo">EDWIN<span>.</span></div>
+            <div class="logo">EGR123<span>.</span></div>
             <div class="menu-toggle" id="mobile-menu">
                 <span></span>
                 <span></span>
@@ -25,7 +26,9 @@
                 <li><a href="#about">About</a></li>
                 <li><a href="#experience">Education</a></li>
                 <li><a href="#skills">Skills</a></li>
-                <li><a href="#college-work">Gallery</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#certificates">Certificates</a></li>
+                <li><a href="#college-work">Industrial Visit</a></li>
                 <li><a href="#hobbies">Interests</a></li>
                 <li><a href="#activities">Activities</a></li>
             </ul>
@@ -57,6 +60,11 @@
                     <div class="image-wrapper">
                         <img src="profile/WhatsApp Image 2026-03-08 at 13.13.52.jpeg" alt="Edwin Gnanaraj H" class="profile-img">
                     </div>
+                    <div style="text-align: center; margin-top: 25px;">
+                        <a href="resume/resume.jpeg" download="Edwin_Gnanaraj_H_Resume.jpeg" class="btn primary" style="padding: 12px 30px; border-radius: 50px; font-size: 0.9rem; letter-spacing: 1px; display: inline-flex; align-items: center; gap: 10px; transition: 0.3s; cursor: pointer; text-decoration: none;">
+                            <i class="fas fa-file-download"></i> Download Resume
+                        </a>
+                    </div>
                 </div>
                 <div class="about-text">
                     <h2>Meet <span>Edwin Gnanaraj H</span></h2>
@@ -79,6 +87,13 @@
                             <h3>01</h3>
                             <p>Internship</p>
                         </div>
+                    </div>
+                    
+                    <div class="contact-details" style="margin-top: 30px; display: flex; flex-direction: column; gap: 15px;">
+                        <p style="color: var(--text-muted); font-size: 1.05rem;"><i class="fas fa-envelope" style="color: var(--primary-color); margin-right: 12px; width: 20px;"></i><strong>Email:</strong> edwingnanarajh@gmail.com</p>
+                        <p style="color: var(--text-muted); font-size: 1.05rem;"><i class="fas fa-phone" style="color: var(--primary-color); margin-right: 12px; width: 20px;"></i><strong>Phone:</strong> +91 6383260112</p>
+                        <p style="color: var(--text-muted); font-size: 1.05rem;"><i class="fab fa-instagram" style="color: var(--primary-color); margin-right: 12px; width: 20px;"></i><strong>Instagram:</strong> <a href="https://www.instagram.com/egr_123_official?igsh=MWp1enN2bGNkM3Bpcg==" target="_blank" style="color: var(--primary-color); text-decoration: none; border-bottom: 1px solid transparent; transition: 0.3s;" onmouseover="this.style.borderBottom='1px solid var(--primary-color)'" onmouseout="this.style.borderBottom='1px solid transparent'">egr_123_official</a></p>
+                        <p style="color: var(--text-muted); font-size: 1.05rem;"><i class="fab fa-facebook" style="color: var(--primary-color); margin-right: 12px; width: 20px;"></i><strong>Facebook:</strong> <a href="https://www.facebook.com/share/1CGtdSyfp6/" target="_blank" style="color: var(--primary-color); text-decoration: none; border-bottom: 1px solid transparent; transition: 0.3s;" onmouseover="this.style.borderBottom='1px solid var(--primary-color)'" onmouseout="this.style.borderBottom='1px solid transparent'">Facebook Profile</a></p>
                     </div>
                 </div>
             </div>
@@ -143,7 +158,10 @@
                                 <h4>Kamarajar Port Limited</h4>
                                 <p class="role">Industrial Training (25 Days)</p>
                                 <p class="desc">Gained practical exposure to port operations, mechanical maintenance, and industrial safety standards.</p>
-                                <div class="intern-img-container">
+                                <button onclick="var pic = document.getElementById('intern-pic'); pic.style.display = pic.style.display === 'none' ? 'block' : 'none'; this.innerHTML = pic.style.display === 'none' ? '<i class=\'fas fa-image\'></i> View Certificate' : '<i class=\'fas fa-times\'></i> Hide Certificate';" class="btn primary" style="margin-top: 15px; cursor: pointer; border: none; font-size: 0.9rem; padding: 10px 20px;">
+                                    <i class="fas fa-image"></i> View Certificate
+                                </button>
+                                <div class="intern-img-container" id="intern-pic" style="display: none; margin-top: 15px;">
                                     <img src="intership-pic/WhatsApp Image 2026-03-08 at 13.13.58.jpeg" alt="Industrial Training at Kamarajar Port" class="intern-img">
                                 </div>
                             </div>
@@ -200,35 +218,111 @@
             </div>
         </section>
 
+        <!-- Projects Section -->
+        <section id="projects" class="projects">
+            <div class="container">
+                <div class="section-title" style="margin-bottom: 20px;">
+                    <h2> <span>Projects</span></h2>
+                    <p>Details about my ongoing and completed projects.</p>
+                </div>
+                <div class="projects-grid">
+                    <!-- Project 1: Ship Rudders -->
+                    <div class="project-card">
+                        <div class="project-img" style="background-image: url('projects/WhatsApp Image 2026-03-21 at 17.20.42.jpeg');"></div>
+                        <div class="project-overlay">
+                            <h3>Types of Ship Rudders</h3>
+                            <p>Study and analysis of different rudder types used in marine vessels including balanced, unbalanced, semi-balanced and flap rudders.</p>
+                            <a href="projects/TEAM PROJECT REPORT FINAL YEAR.pdf" target="_blank" class="view-btn"><i class="fas fa-file-pdf"></i> View Project Report</a>
+                        </div>
+                    </div>
+
+                    <!-- Project 2: Rotating Truck Trolley -->
+                    <div class="project-card">
+                        <div class="project-img" style="background-image: url('projects/6.jpeg');"></div>
+                        <div class="project-overlay">
+                            <h3>Multi-Direction Rotating Truck Trolley (Simulation)</h3>
+                            <p>Designed a trolley mechanism using SolidWorks, capable of rotating in multiple directions to improve maneuverability in confined industrial spaces.</p>
+                            <a href="projects/truck_trailor.pdf" target="_blank" class="view-btn"><i class="fas fa-file-pdf"></i> View Project Report</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certificates Section -->
+        <section id="certificates" class="skills" style="background: linear-gradient(to bottom, #0f1012, #15171a); padding-bottom: 40px; padding-top: 40px;">
+            <div class="container">
+                <div class="section-title" style="margin-bottom: 20px;">
+                    <h2> <span>Certificates</span></h2>
+                    <p>My professional certifications and learning achievements.</p>
+                </div>
+                <div class="certificates-grid">
+                    <div class="cert-card">
+                        <div class="cert-badge">
+                            <i class="fas fa-industry"></i>
+                        </div>
+                        <div class="cert-info">
+                            <h3>Industry 4.0 and its Applications in Manufacturing Industries</h3>
+                            <span class="issuer">Technical Training</span>
+                            <p class="cert-date">Certified Specialist</p>
+                        </div>
+                        <div class="cert-action">
+                            <a href="certificate/certificate-pdf.pdf" target="_blank" class="btn primary" style="padding: 10px 20px; font-size: 0.85rem; border: none; cursor: pointer;">
+                                <i class="fas fa-eye"></i> View Certificate
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <!-- College Highlights Section -->
         <section id="college-work" class="experience">
             <div class="container">
                 <div class="section-title">
-                    <h2>College <span>Highlights</span> & Memories</h2>
+                    <h2>Industrial <span>Visit</span></h2>
                     <p>Capturing the journey, teamwork, and practical learning from my time at university.</p>
                 </div>
                 <div class="gallery-grid">
-                    <div class="gallery-item">
-                        <img src="during-college-work/2.jpeg" alt="College Highlights">
+                    <div class="gallery-item" style="position: relative;">
+                        <img src="during-college-work/Autotech Industry india Pvt Limited.jpeg" alt="Autotech Industry india Pvt Limited">
+                        <div style="position: absolute; bottom: 0; left: 0; width: 100%; padding: 15px; background: linear-gradient(transparent, rgba(0,0,0,0.9)); color: #fff; font-size: 0.95rem; font-weight: 500; text-align: center; border-bottom-left-radius: 20px; border-bottom-right-radius: 20px;">Autotech Industry india Pvt Limited</div>
+                        <div style="position: absolute; top: 10px; right: 10px; display: flex; gap: 8px; z-index: 10;">
+                            <button onclick="this.closest('.gallery-item').requestFullscreen()" style="background: rgba(0,0,0,0.7); color: white; border: none; padding: 6px 12px; border-radius: 5px; cursor: pointer; font-size: 0.8rem; font-weight: 600;"><i class="fas fa-expand"></i> Full Screen</button>
+                            <button onclick="try{document.exitFullscreen()}catch(e){}" style="background: rgba(0,0,0,0.7); color: white; border: none; padding: 6px 12px; border-radius: 5px; cursor: pointer; font-size: 0.8rem; font-weight: 600;"><i class="fas fa-compress"></i> Half Screen</button>
+                        </div>
                     </div>
-                    <div class="gallery-item">
-                        <img src="during-college-work/3.jpeg" alt="College Highlights">
+                    <div class="gallery-item" style="position: relative;">
+                        <img src="during-college-work/Ennore Thermal Power Station.jpeg" alt="Ennore Thermal Power Station">
+                        <div style="position: absolute; bottom: 0; left: 0; width: 100%; padding: 15px; background: linear-gradient(transparent, rgba(0,0,0,0.9)); color: #fff; font-size: 0.95rem; font-weight: 500; text-align: center; border-bottom-left-radius: 20px; border-bottom-right-radius: 20px;">Ennore Thermal Power Station</div>
+                        <div style="position: absolute; top: 10px; right: 10px; display: flex; gap: 8px; z-index: 10;">
+                            <button onclick="this.closest('.gallery-item').requestFullscreen()" style="background: rgba(0,0,0,0.7); color: white; border: none; padding: 6px 12px; border-radius: 5px; cursor: pointer; font-size: 0.8rem; font-weight: 600;"><i class="fas fa-expand"></i> Full Screen</button>
+                            <button onclick="try{document.exitFullscreen()}catch(e){}" style="background: rgba(0,0,0,0.7); color: white; border: none; padding: 6px 12px; border-radius: 5px; cursor: pointer; font-size: 0.8rem; font-weight: 600;"><i class="fas fa-compress"></i> Half Screen</button>
+                        </div>
                     </div>
-                    <div class="gallery-item">
-                        <img src="during-college-work/4.jpeg" alt="College Highlights">
+                    <div class="gallery-item" style="position: relative;">
+                        <img src="during-college-work/IGP group.jpeg" alt="IGP group">
+                        <div style="position: absolute; bottom: 0; left: 0; width: 100%; padding: 15px; background: linear-gradient(transparent, rgba(0,0,0,0.9)); color: #fff; font-size: 0.95rem; font-weight: 500; text-align: center; border-bottom-left-radius: 20px; border-bottom-right-radius: 20px;">IGP group</div>
+                        <div style="position: absolute; top: 10px; right: 10px; display: flex; gap: 8px; z-index: 10;">
+                            <button onclick="this.closest('.gallery-item').requestFullscreen()" style="background: rgba(0,0,0,0.7); color: white; border: none; padding: 6px 12px; border-radius: 5px; cursor: pointer; font-size: 0.8rem; font-weight: 600;"><i class="fas fa-expand"></i> Full Screen</button>
+                            <button onclick="try{document.exitFullscreen()}catch(e){}" style="background: rgba(0,0,0,0.7); color: white; border: none; padding: 6px 12px; border-radius: 5px; cursor: pointer; font-size: 0.8rem; font-weight: 600;"><i class="fas fa-compress"></i> Half Screen</button>
+                        </div>
                     </div>
-                    <div class="gallery-item">
-                        <img src="during-college-work/5.jpeg" alt="College Highlights">
+                    <div class="gallery-item" style="position: relative;">
+                        <img src="during-college-work/IIT Madras Research Park.jpeg" alt="IIT Madras Research Park">
+                        <div style="position: absolute; bottom: 0; left: 0; width: 100%; padding: 15px; background: linear-gradient(transparent, rgba(0,0,0,0.9)); color: #fff; font-size: 0.95rem; font-weight: 500; text-align: center; border-bottom-left-radius: 20px; border-bottom-right-radius: 20px;">IIT Madras Research Park</div>
+                        <div style="position: absolute; top: 10px; right: 10px; display: flex; gap: 8px; z-index: 10;">
+                            <button onclick="this.closest('.gallery-item').requestFullscreen()" style="background: rgba(0,0,0,0.7); color: white; border: none; padding: 6px 12px; border-radius: 5px; cursor: pointer; font-size: 0.8rem; font-weight: 600;"><i class="fas fa-expand"></i> Full Screen</button>
+                            <button onclick="try{document.exitFullscreen()}catch(e){}" style="background: rgba(0,0,0,0.7); color: white; border: none; padding: 6px 12px; border-radius: 5px; cursor: pointer; font-size: 0.8rem; font-weight: 600;"><i class="fas fa-compress"></i> Half Screen</button>
+                        </div>
                     </div>
-                    <div class="gallery-item">
-                        <img src="during-college-work/6.jpeg" alt="College Highlights">
-                    </div>
-                    <div class="gallery-item">
-                        <img src="during-college-work/7.jpeg" alt="College Highlights">
-                    </div>
-                    <div class="gallery-item large">
-                        <img src="during-college-work/WhatsApp Image 2026-03-08 at 13.13.58.jpeg" alt="College Highlights">
+                    <div class="gallery-item large" style="position: relative;">
+                        <img src="during-college-work/TANSAM (Tamilnadu smart and advanced manufacturing centre).jpeg" alt="TANSAM (Tamilnadu smart and advanced manufacturing centre)">
+                        <div style="position: absolute; bottom: 0; left: 0; width: 100%; padding: 20px; background: linear-gradient(transparent, rgba(0,0,0,0.9)); color: #fff; font-size: 1.1rem; font-weight: 500; text-align: center; border-bottom-left-radius: 20px; border-bottom-right-radius: 20px;">TANSAM (Tamilnadu smart and advanced manufacturing centre)</div>
+                        <div style="position: absolute; top: 10px; right: 10px; display: flex; gap: 8px; z-index: 10;">
+                            <button onclick="this.closest('.gallery-item').requestFullscreen()" style="background: rgba(0,0,0,0.7); color: white; border: none; padding: 6px 12px; border-radius: 5px; cursor: pointer; font-size: 0.8rem; font-weight: 600;"><i class="fas fa-expand"></i> Full Screen</button>
+                            <button onclick="try{document.exitFullscreen()}catch(e){}" style="background: rgba(0,0,0,0.7); color: white; border: none; padding: 6px 12px; border-radius: 5px; cursor: pointer; font-size: 0.8rem; font-weight: 600;"><i class="fas fa-compress"></i> Half Screen</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -289,22 +383,25 @@
                     <p>My achievements and contributions beyond the classroom.</p>
                 </div>
                 <div class="activities-grid">
-                    <div class="activity-card">
+                    <div class="activity-card" onclick="window.open('certificate/drawing-pdf.pdf', '_blank')" style="cursor: pointer;" title="Click to view Drawing PDF">
                         <div class="activity-icon"><i class="fas fa-palette"></i></div>
                         <h3>Drawing</h3>
                         <p>State Level 1st Prize (School Level)</p>
+                        <p style="margin-top: 10px; font-size: 0.85rem; color: #00d2ff;"><i class="fas fa-file-pdf"></i> View PDF</p>
                     </div>
 
-                    <div class="activity-card">
+                    <div class="activity-card" onclick="window.open('certificate/photograpy.pdf', '_blank')" style="cursor: pointer;" title="Click to view Photography PDF">
                         <div class="activity-icon"><i class="fas fa-camera"></i></div>
                         <h3>Photography</h3>
                         <p>State Level 2nd Prize (Diploma Level)</p>
+                        <p style="margin-top: 10px; font-size: 0.85rem; color: #00d2ff;"><i class="fas fa-file-pdf"></i> View PDF</p>
                     </div>
 
-                    <div class="activity-card">
+                    <div class="activity-card" onclick="window.open('certificate/upcycling.pdf', '_blank')" style="cursor: pointer;" title="Click to view Upcycling PDF">
                         <div class="activity-icon"><i class="fas fa-recycle"></i></div>
                         <h3>Upcycling</h3>
                         <p>Department Level 3rd Prize (Diploma Level)</p>
+                        <p style="margin-top: 10px; font-size: 0.85rem; color: #00d2ff;"><i class="fas fa-file-pdf"></i> View PDF</p>
                     </div>
 
                     <div class="activity-card">
@@ -319,16 +416,18 @@
                         <p>Conducted Dengue Awareness in village (School Level).</p>
                     </div>
 
-                    <div class="activity-card">
+                    <div class="activity-card" onclick="window.open('certificate/merchantnavy.jpeg', '_blank')" style="cursor: pointer;" title="Click to view Merchant Navy PDF">
                         <div class="activity-icon"><i class="fas fa-anchor"></i></div>
                         <h3>Merchant Navy</h3>
                         <p>Dedicated Merchant Navy Cadet training.</p>
+                        <p style="margin-top: 10px; font-size: 0.85rem; color: #00d2ff;"><i class="fas fa-file-pdf"></i> View PDF</p>
                     </div>
 
-                    <div class="activity-card">
+                    <div class="activity-card" onclick="window.open('certificate/drill-img.jpeg', '_blank')" style="cursor: pointer;" title="Click to view Emergency Drills PDF">
                         <div class="activity-icon"><i class="fas fa-fire-extinguisher"></i></div>
                         <h3>Emergency Drills</h3>
                         <p>Fire and First Aid drills and safety training.</p>
+                        <p style="margin-top: 10px; font-size: 0.85rem; color: #00d2ff;"><i class="fas fa-file-pdf"></i> View PDF</p>
                     </div>
                 </div>
             </div>
